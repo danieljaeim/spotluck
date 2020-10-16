@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d7fb4f84e35f443cc266d66ff11f911",
+    "revision": "1718b2c3b567e2ed48b1bb64541fff4c",
     "url": "/spotluck/index.html"
   },
   {
