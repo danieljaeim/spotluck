@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.518fac94.chunk.css",
-    "main.js": "/static/js/main.767fb651.chunk.js",
-    "main.js.map": "/static/js/main.767fb651.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.12a830c6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.12a830c6.js.map",
-    "static/css/2.89fcc9a3.chunk.css": "/static/css/2.89fcc9a3.chunk.css",
-    "static/js/2.ee669797.chunk.js": "/static/js/2.ee669797.chunk.js",
-    "static/js/2.ee669797.chunk.js.map": "/static/js/2.ee669797.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.501cb3a180a17ee1f0a041429daaef2a.js": "/precache-manifest.501cb3a180a17ee1f0a041429daaef2a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.89fcc9a3.chunk.css.map": "/static/css/2.89fcc9a3.chunk.css.map",
-    "static/css/main.518fac94.chunk.css.map": "/static/css/main.518fac94.chunk.css.map",
-    "static/js/2.ee669797.chunk.js.LICENSE.txt": "/static/js/2.ee669797.chunk.js.LICENSE.txt",
-    "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg"
+    "main.css": "/spotluck/static/css/main.518fac94.chunk.css",
+    "main.js": "/spotluck/static/js/main.060d4eb7.chunk.js",
+    "main.js.map": "/spotluck/static/js/main.060d4eb7.chunk.js.map",
+    "runtime-main.js": "/spotluck/static/js/runtime-main.9c3b3283.js",
+    "runtime-main.js.map": "/spotluck/static/js/runtime-main.9c3b3283.js.map",
+    "static/css/2.362543a0.chunk.css": "/spotluck/static/css/2.362543a0.chunk.css",
+    "static/js/2.ee669797.chunk.js": "/spotluck/static/js/2.ee669797.chunk.js",
+    "static/js/2.ee669797.chunk.js.map": "/spotluck/static/js/2.ee669797.chunk.js.map",
+    "index.html": "/spotluck/index.html",
+    "precache-manifest.21bbee8b3aeab895a22b267b2e43077e.js": "/spotluck/precache-manifest.21bbee8b3aeab895a22b267b2e43077e.js",
+    "service-worker.js": "/spotluck/service-worker.js",
+    "static/css/2.362543a0.chunk.css.map": "/spotluck/static/css/2.362543a0.chunk.css.map",
+    "static/css/main.518fac94.chunk.css.map": "/spotluck/static/css/main.518fac94.chunk.css.map",
+    "static/js/2.ee669797.chunk.js.LICENSE.txt": "/spotluck/static/js/2.ee669797.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/spotluck/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.12a830c6.js",
-    "static/css/2.89fcc9a3.chunk.css",
+    "static/js/runtime-main.9c3b3283.js",
+    "static/css/2.362543a0.chunk.css",
     "static/js/2.ee669797.chunk.js",
     "static/css/main.518fac94.chunk.css",
-    "static/js/main.767fb651.chunk.js"
+    "static/js/main.060d4eb7.chunk.js"
   ]
 }
