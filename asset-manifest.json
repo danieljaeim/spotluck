@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/spotluck/static/css/main.09ebeace.chunk.css",
-    "main.js": "/spotluck/static/js/main.51d22212.chunk.js",
-    "main.js.map": "/spotluck/static/js/main.51d22212.chunk.js.map",
+    "main.js": "/spotluck/static/js/main.afd7a393.chunk.js",
+    "main.js.map": "/spotluck/static/js/main.afd7a393.chunk.js.map",
     "runtime-main.js": "/spotluck/static/js/runtime-main.9c3b3283.js",
     "runtime-main.js.map": "/spotluck/static/js/runtime-main.9c3b3283.js.map",
     "static/css/2.362543a0.chunk.css": "/spotluck/static/css/2.362543a0.chunk.css",
     "static/js/2.396ccc23.chunk.js": "/spotluck/static/js/2.396ccc23.chunk.js",
     "static/js/2.396ccc23.chunk.js.map": "/spotluck/static/js/2.396ccc23.chunk.js.map",
     "index.html": "/spotluck/index.html",
-    "precache-manifest.0de9892590bc0a9fd25defec4d91ef29.js": "/spotluck/precache-manifest.0de9892590bc0a9fd25defec4d91ef29.js",
+    "precache-manifest.1c9f5a2a5d82e4b31b3401be95151f09.js": "/spotluck/precache-manifest.1c9f5a2a5d82e4b31b3401be95151f09.js",
     "service-worker.js": "/spotluck/service-worker.js",
     "static/css/2.362543a0.chunk.css.map": "/spotluck/static/css/2.362543a0.chunk.css.map",
     "static/css/main.09ebeace.chunk.css.map": "/spotluck/static/css/main.09ebeace.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.362543a0.chunk.css",
     "static/js/2.396ccc23.chunk.js",
     "static/css/main.09ebeace.chunk.css",
-    "static/js/main.51d22212.chunk.js"
+    "static/js/main.afd7a393.chunk.js"
   ]
 }
