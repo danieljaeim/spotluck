@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7b3eafd34bdccdc1a0d754f387d0527f",
+    "revision": "057377118ba3d3dfdad542ce5f3eb856",
     "url": "/spotluck/index.html"
   },
   {
-    "revision": "fee077a56039b3d1e25d",
+    "revision": "6e354feb518bb52786e0",
     "url": "/spotluck/static/css/2.362543a0.chunk.css"
   },
   {
-    "revision": "ac10f2cea94259e64b6a",
+    "revision": "05cbb6cf9efedf2a658c",
     "url": "/spotluck/static/css/main.09ebeace.chunk.css"
   },
   {
-    "revision": "fee077a56039b3d1e25d",
-    "url": "/spotluck/static/js/2.ee669797.chunk.js"
+    "revision": "6e354feb518bb52786e0",
+    "url": "/spotluck/static/js/2.396ccc23.chunk.js"
   },
   {
     "revision": "56729d980da09961afe8d497a21eec12",
-    "url": "/spotluck/static/js/2.ee669797.chunk.js.LICENSE.txt"
+    "url": "/spotluck/static/js/2.396ccc23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ac10f2cea94259e64b6a",
-    "url": "/spotluck/static/js/main.9473b8b2.chunk.js"
+    "revision": "05cbb6cf9efedf2a658c",
+    "url": "/spotluck/static/js/main.51d22212.chunk.js"
   },
   {
     "revision": "9e4665b5c92ae99b444a",
