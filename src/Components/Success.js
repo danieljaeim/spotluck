@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import '../css/Success.css';
 import Thumbnail from '../Components/Thumbnail';
-import PreferenceBar from '../Components/PreferenceBar';
 import ChosenPreferences from '../Components/ChosenPreferences';
 
 const SEED_URI = "https://api.spotify.com/v1/recommendations?";
@@ -387,9 +386,7 @@ export default class Success extends Component {
     }
 
     updateMenu = () => {
-        window.removeEventListener('wheel', (e) => {
-        });
-        this.setState({ openingMenu: false })
+        this.setState(st => ({ openingMenu: !st.openingMenu }))
     }
 
     updateSortByNew = () => {
@@ -426,6 +423,7 @@ export default class Success extends Component {
                         sortByNew={sortByNew}
                         token={token}
                         changePlayerSettings={changePlayerSettings}
+                        updateMenu={this.updateMenu}
                         lockSpecificTrack={this.lockSpecificTrack}
                         updateTimeRange={this.updateTimeRange}
                         updateHoveredObj={this.updateHoveredObj}

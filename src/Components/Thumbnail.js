@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import '../css/Success.css';
 import '../css/Thumbnail.css';
 
@@ -8,7 +7,7 @@ const colorfilter = ['330036', '38182F', '330036', '8D0101', 'FE0B0B', 'FCA122',
 export default class Thumbnail extends Component {
 
     render() {
-        const { tracks, newartisttracks, token, sortByNew, updateSortByNew, queueUpSongs,
+        const { tracks, newartisttracks, token, sortByNew, updateSortByNew, queueUpSongs, updateMenu,
             callForRecommend, playSpecificSong, updateHoveredObj, lockSpecificTrack, select, hoverIndex } = this.props;
 
         let chosentracks = sortByNew ? newartisttracks : tracks;
@@ -60,7 +59,7 @@ export default class Thumbnail extends Component {
                                     </span>
                                     <span className="track-popularity">
                                         {new Array(Math.ceil((track.popularity / 10).toFixed(2))).fill(0).map((tile, i) =>
-                                            <span className="fill-up-popularity" style={{ backgroundColor: '#' + colorfilter[i] }}/>
+                                            <span className="fill-up-popularity" style={{ backgroundColor: '#' + colorfilter[i] }} />
                                         )}
                                     </span>
                                 </span>
@@ -77,11 +76,15 @@ export default class Thumbnail extends Component {
                     </div>
                     <div className="refresh-tracks-button"
                         onClick={_ => callForRecommend()}>
-                        <div class="refresh" aria-hidden="true"/>
+                        <div class="refresh" aria-hidden="true" />
                     </div>
                     <div className="play-playlist-button"
                         onClick={_ => queueUpSongs()}>
-                        <div class="play-circle-o" aria-hidden="true"/>
+                        <div class="play-circle-o" aria-hidden="true" />
+                    </div>
+                    <div className="return-button"
+                        onClick={_ => queueUpSongs()}>
+                        <div class="return" onClick={ _ => updateMenu() } aria-hidden="true" />
                     </div>
                     <div className="edit-settings">
                         <span className="check-new-artists">

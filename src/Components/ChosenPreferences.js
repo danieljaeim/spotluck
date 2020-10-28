@@ -1,9 +1,6 @@
 import React, { Component, useRef } from 'react';
-import Slider from 'react-slick';
 import axios from 'axios';
 import '../css/ChosenPreferences.css';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
 
 export default class ChosenPreferences extends Component {
 
@@ -153,19 +150,16 @@ export default class ChosenPreferences extends Component {
                                 </input>
                                 {this.state.showingData && this.state.currentSearchTerm ?
                                     <div className="cancel-times"
-                                        onClick={e => {
-                                            e.preventDefault(); document.getElementById('input-text').value = "";
-                                            this.setState({
-                                                showingData: false,
-                                                currentSearchTerm: '', data: null
-                                            })
-                                        }} />
+                                        onClick={e => { 
+                                            e.preventDefault(); document.getElementById('input-text').value = ""; 
+                                            this.setState({ showingData: false, 
+                                            currentSearchTerm: '', data: null }) }} />
                                     : null
                                 }
                             </div>
                             <div className="search-button-modal">
                                 <div className={`generate-button ${changingPreferenceIndex !== null ? 'move-button-down-anim' : ''}`}
-                                    onClick={() => { window.removeEventListener('wheel', this.addWheelListener); updateMenu() }}>
+                                    onClick={() => updateMenu() }>
                                     Generate Playlist
                                 </div>
                             </div>

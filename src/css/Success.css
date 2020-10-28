@@ -124,7 +124,8 @@
     height: 100%;
     background-color: white;
     overflow-y: scroll;
-    width: 105%;
+    width: 85%;
+    left: 7.5%;
     border-top: 5px #E36588 solid;
     border-bottom: 5px #E36588 solid;
     padding-bottom: 20px;
