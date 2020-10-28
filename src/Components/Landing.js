@@ -28,7 +28,7 @@ export default class Landing extends Component {
     }
 
     render() {
-        const { token, deviceId, changePlayerSettings, curTrack, curVolume, changeCurrentTrackTime, changeCurrentVolume, playing, trackTimer } = this.props;
+        const { token, deviceId, changePlayerSettings, pauseTimer, restartTimer, curTrack, curVolume, changeCurrentTrackTime, changeCurrentVolume, playing, trackTimer } = this.props;
         const { readyToRedirect } = this.state;
 
         if (readyToRedirect) {
@@ -40,7 +40,13 @@ export default class Landing extends Component {
             <div className="root-container">
                 <Navbar />
                 <Success changePlayerSettings={changePlayerSettings} deviceId={deviceId} token={token}/>
-                <CurrentTrack changeCurrentTrackTime={changeCurrentTrackTime} changeCurrentVolume={changeCurrentVolume} playing={playing} curTrack={curTrack} curVolume={curVolume} trackTimer={trackTimer} changePlayerSettings={changePlayerSettings} />
+                <CurrentTrack changeCurrentTrackTime={changeCurrentTrackTime}
+                 changeCurrentVolume={changeCurrentVolume} 
+                 playing={playing} curTrack={curTrack} 
+                 curVolume={curVolume} trackTimer={trackTimer} 
+                 changePlayerSettings={changePlayerSettings} 
+                 pauseTimer={pauseTimer}
+                 restartTimer={restartTimer} />
             </div>
         )
     }

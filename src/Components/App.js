@@ -129,6 +129,19 @@ export default class App extends React.Component {
     this.startTimer(0);
   }
 
+  pauseTimer = async () => {
+    let timer = this.state.currentTimer;
+    await clearInterval(timer);
+  }
+
+  restartTimer = async () => {
+    let timer = setInterval(e => {
+      this.setState(st => ({ trackTimer: st.trackTimer + 1000 }))
+    }, 1000);
+
+    this.setState({ currentTimer: timer });
+  }
+
   startTimer = (start) => {
     this.setState({ trackTimer: +start })
     let timer = setInterval(e => {
@@ -174,6 +187,8 @@ export default class App extends React.Component {
             <Landing {...props} 
                     changeCurrentTrackTime={this.changeCurrentTrackTime}
                     changeCurrentVolume={this.changeCurrentVolume}
+                    pauseTimer={this.pauseTimer}
+                    restartTimer={this.restartTimer}
                     curTrack={curTrack} 
                     curVolume={curVolume}
                     playing={playing} 

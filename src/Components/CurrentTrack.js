@@ -15,7 +15,7 @@ export default class CurrentTrack extends Component {
     }
 
     render() {
-        const { changePlayerSettings, changeCurrentTrackTime, changeCurrentVolume, curTrack, curVolume, playing, trackTimer } = this.props;
+        const { changePlayerSettings, changeCurrentTrackTime, changeCurrentVolume, pauseTimer, restartTimer, curTrack, curVolume, playing, trackTimer } = this.props;
 
         return (
             curTrack ?
@@ -28,13 +28,13 @@ export default class CurrentTrack extends Component {
                         <div className="cur-artist-name"> {curTrack.track_window.current_track.artists[0].name}</div>
                     </div>
                     <div className="button-bar">
-                        <div className="control-btn prev-track fa-2x" onClick={() => changePlayerSettings('prev')}/>
+                        <div className="control-btn prev-track fa-2x" onClick={() => changePlayerSettings('prev')} />
                         <button className="control-btn toggle-button" onClick={() => changePlayerSettings('toggle')}>
                             {playing ?
-                                <i className="fa fa-pause fa-2x" aria-hidden="true"></i> :
-                                <i className="fa fa-play play-bar-play fa-2x" aria-hidden="true" />}
+                                <div onClick={_ => pauseTimer()} className="cur-pause" aria-hidden="true" /> :
+                                <div onClick={_ => restartTimer()} className="cur-play" aria-hidden="true" />}
                         </button>
-                        <div className="control-btn next-track" onClick={() => changePlayerSettings('next')}/>
+                        <div className="control-btn next-track" onClick={() => changePlayerSettings('next')} />
                     </div>
                     <div className="song-slider">
                         <span className="song-start-time"> {this.millisToMinutesAndSeconds(trackTimer)} </span>

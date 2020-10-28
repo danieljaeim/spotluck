@@ -151,6 +151,17 @@ export default class ChosenPreferences extends Component {
                                     value={this.state.currentSearchTerm}
                                     placeholder={`Search for an artist`}>
                                 </input>
+                                {this.state.showingData && this.state.currentSearchTerm ?
+                                    <div className="cancel-times"
+                                        onClick={e => {
+                                            e.preventDefault(); document.getElementById('input-text').value = "";
+                                            this.setState({
+                                                showingData: false,
+                                                currentSearchTerm: '', data: null
+                                            })
+                                        }} />
+                                    : null
+                                }
                             </div>
                             <div className="search-button-modal">
                                 <div className={`generate-button ${changingPreferenceIndex !== null ? 'move-button-down-anim' : ''}`}
@@ -167,7 +178,7 @@ export default class ChosenPreferences extends Component {
                                             className="related-artist">
                                             <div
                                                 className="replace-div">
-                                                <span className="swap-side" 
+                                                <span className="swap-side"
                                                     onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
                                                     onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
                                                     onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}>
@@ -196,12 +207,14 @@ export default class ChosenPreferences extends Component {
                                                         onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
                                                         onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
                                                         className="replace-div">
-                                                        <span className="swap-side">
+                                                        <span className="swap-side"
+                                                            onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}>
                                                             <div className="arrow-circle-up"
                                                                 onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}
                                                                 aria-hidden="true" />
                                                         </span>
-                                                        <span className="play-side">
+                                                        <span className="play-side"
+                                                            onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}>
                                                             <div className="play-inner" style={{ color: 'white' }}
                                                                 onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}
                                                                 aria-hidden="true" />

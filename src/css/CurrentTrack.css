@@ -31,7 +31,7 @@
     height: 100%;
     width: 170px;
     left: 22%;
-    top: -2px;
+    top: -0px;
     justify-content: center;
 }
 
@@ -333,6 +333,24 @@
 .pause-icon {
     position: relative;
     top: 5px;
+}
+
+.cur-pause {
+    position: absolute;
+    bottom: 5px;
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-image: url('../data/icons/pause.svg');
+}
+
+.cur-play {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    bottom: 5px;
+    background-size: contain;
+    background-image: url('../data/icons/play.svg');
 }
 
 .play-icon {
