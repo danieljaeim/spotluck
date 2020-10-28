@@ -247,14 +247,14 @@
     position: absolute;
     display: inline-block;
     width: 40px;
-    left: 85%;
+    left: 82%;
     height: 90px;
 }
 
 .vol-slider {
     position: relative;
     -webkit-appearance: none;
-    width: 100px;
+    width: 150px;
     height: 6px;
     top: 20px;
     left: 0px;

@@ -43,7 +43,7 @@ export default class CurrentTrack extends Component {
                     </div>
                     <div className="volume-slider">
                         <span className="song-star" />
-                            <input onChange={(e) => {e.preventDefault(); changeCurrentVolume(e.target.value)}} type="range" className="vol-slider" min="0" max="1" step="0.05" value={`${curVolume}`}></input>
+                            <input onChange={(e) => {e.preventDefault(); changeCurrentVolume(e.target.value)}} type="range" className="vol-slider" min="0" max="1" step="0.025" value={`${curVolume}`}></input>
                         <span className="song-end-time"> {this.millisToMinutesAndSeconds(curTrack.duration)} </span>
                 </div>
                 </div > : <div></div>

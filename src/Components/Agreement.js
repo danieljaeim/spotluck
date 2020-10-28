@@ -22,7 +22,8 @@ export default class Agreement extends Component {
                                 href={"https://accounts.spotify.com/authorize" +
                                     `?client_id=${client_id}` +
                                     "&response_type=token" +
-                                    "&redirect_uri=https://serene-hollows-75057.herokuapp.com/landing" +
+                                    // "&redirect_uri=https://serene-hollows-75057.herokuapp.com/landing" +
+                                    "&redirect_uri=http://localhost:3000/landing" +
                                     `&scope=${scopes ? encodeURIComponent(scopes) : ''}`}>
                                 Login with Spotify
                     </a>

@@ -5,8 +5,6 @@ import '../css/ChosenPreferences.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-import Carousel from './Carousel';
-
 export default class ChosenPreferences extends Component {
 
     constructor(props) {

@@ -24,7 +24,7 @@ export default class App extends React.Component {
       curTrack: null,
       trackTimer: 0, 
       currentTimer: null, 
-      curVolume: 0.3
+      curVolume: 0.05
     }
     this.playerCheckInterval = null;
   }
