@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import '../css/CurrentTrack.css';
 
-import prev from '../data/icons/prev-track.svg';
-import next from '../data/icons/next-track.svg';
-
-
 export default class CurrentTrack extends Component {
 
     millisToMinutesAndSeconds = (millis) => {
