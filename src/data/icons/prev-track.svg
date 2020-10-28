@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="#352208" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px">
+<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px">
     <title>INTERFACE jadi</title>
-    <path fill="#352208" d="M69.79,23.9a1.26,1.26,0,0,0-1.28.05L32.06,47.69V25a1.25,
+    <path fill="#FFFFFF" d="M69.79,23.9a1.26,1.26,0,0,0-1.28.05L32.06,47.69V25a1.25,
     1.25,0,1,0-2.5,0V73a1.25,1.25,0,1,0,2.5,0V52.31L68.51,76a1.25,1.25,
     0,0,0,1.93-1V25A1.25,1.25,0,0,0,69.79,23.9ZM67.94,72.69,33.1,50,67.94,27.31Z" />
 </svg>

@@ -119,11 +119,6 @@
     border-top: 1px black solid; */
 }
 
-.imageStyle:hover {
-    fill-opacity: black;
-    opacity: 0.2;
-}
-
 .tracklist {
     position: absolute;
     height: 100%;
@@ -133,7 +128,7 @@
     border-top: 5px #E36588 solid;
     border-bottom: 5px #E36588 solid;
     padding-bottom: 20px;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 .border-gradient-tracklist {

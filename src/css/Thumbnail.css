@@ -21,7 +21,7 @@
 
 .track-popularity {
     left: 550px;
-    position: absolute; 
+    position: absolute;
     display: inline-block;
     width: 140px;
     text-align: left;
@@ -51,7 +51,6 @@
         opacity: 0;
         right: 0px;
     }
-
     100% {
         opacity: 1;
     }
@@ -97,7 +96,7 @@
 }
 
 .filter-artist-text {
-    position: absolute; 
+    position: absolute;
     font-size: 18px;
     bottom: 5px;
     text-decoration: underline;
@@ -116,7 +115,6 @@
 
 .track-edit {
     position: relative;
-    
 }
 
 .imageStyle {
@@ -131,24 +129,41 @@
     border: .2px #edf6f9 solid;
 }
 
-.fa-play-circle {
+.play-circle {
     position: absolute;
-    font-size: 3.5rem;
-    left: 0%;
-    top: .8rem;
-    width: 95%;
-    /* background-color: pink; */
-}
-
-.fa-play-circle:hover {
-    opacity: 0.5;
+    height: 55px;
+    width: 55px;
+    z-index: 2;
+    top: 15px;
+    left: 10px;
+    opacity: 0;
+    background-image: url('../data/icons/play.svg');
 }
 
 .img-hover {
     position: absolute;
     width: 75px;
     height: 75px;
-    background-color: white;
+}
+
+.img-hover:hover .play-circle {
+    opacity: 1;
+    animation: 1s expand-play linear alternate infinite;
+}
+
+@keyframes expand-play {
+    0% {
+        transform: scale(.9);
+    }
+    25% {
+        transform: scale(.88);
+    }
+    50% {
+        transform: scale(.85);
+    }
+    100% {
+        transform: scale(.83)
+    }
 }
 
 .edit-settings {
@@ -166,7 +181,7 @@
     border: 4px white solid;
     box-shadow: 4px 3px 10px grey;
     background-color: whitesmoke;
-    background: linear-gradient(90deg, rgba(255,184,92,1) 0%, rgba(227,101,136,1) 75%);
+    background: linear-gradient(90deg, rgba(255, 184, 92, 1) 0%, rgba(227, 101, 136, 1) 75%);
 }
 
 .check-new-artists {
@@ -178,26 +193,27 @@
     /* outline: 1px solid #1e5180 */
 }
 
-.fa-check-square {
+.check-square {
     position: absolute;
-    top: -10px;
-    left: -5px;
-    font-size: 2.6rem;
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-image: url('../data/icons/checkbox.svg');
 }
 
-.fa-times-circle {
+.times-circle {
     position: absolute;
-    top: -8px;
-    left: -5px;
-    font-size: 2.6rem;   
-    color: black;
+    width: 35px;
+    height: 35px;
+    background-image: url('../data/icons/cancel.svg');
 }
 
 .new-artist {
     position: relative;
-    background-color: white;
-    width: 25px;
-    height: 25px;
+    top: -8px;
+    left: -5px;
+    width: 35px;
+    height: 35px;
     /* border: 0px white solid; */
 }
 
@@ -232,25 +248,34 @@
     border: 4px white solid;
     box-shadow: 4px 3px 10px grey;
     background-color: whitesmoke;
-    background: linear-gradient(90deg, rgba(255,184,92,1) 0%, rgba(227,101,136,1) 75%);
+    background: linear-gradient(90deg, rgba(255, 184, 92, 1) 0%, rgba(227, 101, 136, 1) 75%);
 }
 
-.refresh-tracks-button:hover {
+.refresh-tracks-button:hover .refresh {
     cursor: pointer;
-    box-shadow: 4px 7px 15px black;
+    animation: 10s linear rotating infinite;
 }
 
-.fa-refresh {
+.refresh {
     position: absolute;
-    left: 16px;
-    top: 10px;
+    left: 12px;
+    top: 12px;
     font-size: 5rem;
-    color: white;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-size: contain;
+    background-image: url('../data/icons/refresh.svg');
 }
 
-.fa-refresh:hover {
-    cursor: pointer;
-    color: whitesmoke;
+@keyframes rotating {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg)
+    }
 }
 
 .play-playlist-button {
@@ -267,22 +292,40 @@
     border: 4px white solid;
     box-shadow: 4px 3px 10px grey;
     background-color: whitesmoke;
-    background: linear-gradient(90deg, rgba(255,184,92,1) 0%, rgba(227,101,136,1) 75%);
+    background: linear-gradient(90deg, rgba(255, 184, 92, 1) 0%, rgba(227, 101, 136, 1) 75%);
 }
 
-.play-playlist-button:hover {
-    box-shadow: 4px 7px 20px black;
+.play-playlist-button:hover .play-circle-o {
+    animation: 1s expand-play linear infinite alternate;
 }
 
-.fa-play-circle-o {
+@keyframes expand-play {
+    0% {
+        transform: scale(.9);
+    }
+    25% {
+        transform: scale(.88);
+    }
+    50% {
+        transform: scale(.87);
+    }
+    100% {
+        transform: scale(.85)
+    }
+}
+
+.play-circle-o {
     position: absolute;
-    left: 16px;
-    top: 10px;
+    left: 15px;
+    top: 15px;
+    width: 75px;
+    height: 75px;
     font-size: 5rem;
     color: white;
+    background-image: url('../data/icons/play.svg')
 }
 
-.fa-play-circle-o:hover {
+.play-circle-o:hover {
     cursor: pointer;
     color: whitesmoke;
 }

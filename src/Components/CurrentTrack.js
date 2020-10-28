@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import '../css/CurrentTrack.css';
 
+import prev from '../data/icons/prev-track.svg';
+import next from '../data/icons/next-track.svg';
+
+
 export default class CurrentTrack extends Component {
 
     millisToMinutesAndSeconds = (millis) => {
@@ -24,17 +28,13 @@ export default class CurrentTrack extends Component {
                         <div className="cur-artist-name"> {curTrack.track_window.current_track.artists[0].name}</div>
                     </div>
                     <div className="button-bar">
-                        <button className="control-btn prev-track fa-2x" onClick={() => changePlayerSettings('prev')}>
-                            <i className="fa fa-step-backward" aria-hidden="true"></i>
-                        </button>
+                        <div className="control-btn prev-track fa-2x" onClick={() => changePlayerSettings('prev')}/>
                         <button className="control-btn toggle-button" onClick={() => changePlayerSettings('toggle')}>
                             {playing ?
                                 <i className="fa fa-pause fa-2x" aria-hidden="true"></i> :
                                 <i className="fa fa-play play-bar-play fa-2x" aria-hidden="true" />}
                         </button>
-                        <button className="control-btn next-button" onClick={() => changePlayerSettings('next')}>
-                            <i className="fa fa-step-forward fa-step-forward-icon fa-2x" aria-hidden="true"></i>
-                        </button>
+                        <div className="control-btn next-track" onClick={() => changePlayerSettings('next')}/>
                     </div>
                     <div className="song-slider">
                         <span className="song-start-time"> {this.millisToMinutesAndSeconds(trackTimer)} </span>
@@ -43,9 +43,9 @@ export default class CurrentTrack extends Component {
                     </div>
                     <div className="volume-slider">
                         <span className="song-star" />
-                            <input onChange={(e) => {e.preventDefault(); changeCurrentVolume(e.target.value)}} type="range" className="vol-slider" min="0" max="1" step="0.025" value={`${curVolume}`}></input>
+                        <input onChange={(e) => { e.preventDefault(); changeCurrentVolume(e.target.value) }} type="range" className="vol-slider" min="0" max="1" step="0.025" value={`${curVolume}`}></input>
                         <span className="song-end-time"> {this.millisToMinutesAndSeconds(curTrack.duration)} </span>
-                </div>
+                    </div>
                 </div > : <div></div>
         )
     }

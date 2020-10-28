@@ -6,10 +6,10 @@ import '../css/Thumbnail.css';
 export default class Thumbnail extends Component {
 
     render() {
-        const { tracks, newartisttracks, token, sortByNew, updateSortByNew, queueUpSongs, 
+        const { tracks, newartisttracks, token, sortByNew, updateSortByNew, queueUpSongs,
             callForRecommend, playSpecificSong, updateHoveredObj, lockSpecificTrack, select, hoverIndex } = this.props;
 
-        let chosentracks = sortByNew ? newartisttracks : tracks; 
+        let chosentracks = sortByNew ? newartisttracks : tracks;
 
         return (
             <span className="thumbnail-container">
@@ -41,8 +41,7 @@ export default class Thumbnail extends Component {
                             {/* <span className="track_number"> {i + 1}. </span> */}
                             <div className="name_artist_container">
                                 <div className="img-hover">
-                                    <i className="fa fa-play-circle fa-7x"
-                                        aria-hidden="true"></i>
+                                    <div className="play-circle" />
                                 </div>
                                 <img className='imageStyle'
                                     onClick={() => playSpecificSong(track.uri, track.name)}
@@ -74,20 +73,19 @@ export default class Thumbnail extends Component {
                     </div>
                     <div className="refresh-tracks-button"
                         onClick={_ => callForRecommend()}>
-                        <i class="fa fa-refresh fa-7x" aria-hidden="true"></i>
+                        <div class="refresh" aria-hidden="true"/>
                     </div>
                     <div className="play-playlist-button"
                         onClick={_ => queueUpSongs()}>
-                        <i class="fa fa-play-circle-o fa-6x" aria-hidden="true"></i>
+                        <div class="play-circle-o" aria-hidden="true"/>
                     </div>
                     <div className="edit-settings">
                         <span className="check-new-artists">
-                            <div className="new-artist" 
-                                name="new-artist" 
+                            <div className="new-artist"
                                 onClick={_ => updateSortByNew()}>
                                 {sortByNew ?
-                                    <i className="fa fa-check-square fa-4x" aria-hidden="true" /> :
-                                    <i className="fa fa-times-circle fa-4x" aria-hidden="true" />
+                                    <div className="check-square" aria-hidden="true" /> :
+                                    <div className="times-circle" aria-hidden="true" />
                                 }
                             </div>
                             <span className="new-artist-label"> Prioritize new artists </span>

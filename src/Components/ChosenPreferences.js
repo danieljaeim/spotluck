@@ -121,7 +121,7 @@ export default class ChosenPreferences extends Component {
                                     key={preferences[num].name}
                                     onClick={(e) => setupPreference(num)}>
                                     {this.state.swappingArtistHover && num === changingPreferenceIndex ?
-                                        <i class="fa fa-arrow-circle-down" aria-hidden="true" /> : null}
+                                        <div class="arrow-circle-down" aria-hidden="true" /> : null}
                                     <img className="artist-image-ins"
                                         style={{ backgroundImage: 'cover' }}
                                         src={preferences[num].type === 'artist' ?
@@ -166,20 +166,19 @@ export default class ChosenPreferences extends Component {
                                         <div key={artist.id}
                                             className="related-artist">
                                             <div
-                                                onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
-                                                onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
                                                 className="replace-div">
-                                                <span className="swap-side" onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}>
-                                                    <i className="fa fa-circle" style={{ color: 'white' }} />
-                                                    <i className="fa fa-arrow-circle-up"
+                                                <span className="swap-side" 
+                                                    onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
+                                                    onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
+                                                    onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}>
+                                                    <div className="arrow-circle-up"
                                                         onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}
                                                         aria-hidden="true" />
                                                 </span>
                                                 <span className="play-side" onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}>
-                                                    <i className="fa fa-play inner" style={{ color: 'white' }}
+                                                    <div className="play-inner"
                                                         onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}
                                                         aria-hidden="true" />
-                                                    <i className="fa fa-play outer" style={{ color: 'black' }} />
                                                 </span>
                                             </div>
                                             <img className="related-artist-img" src={artist.images[2].url} alt="" />
@@ -198,16 +197,14 @@ export default class ChosenPreferences extends Component {
                                                         onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
                                                         className="replace-div">
                                                         <span className="swap-side">
-                                                            <i className="fa fa-circle" style={{ color: 'white' }} />
-                                                            <i className="fa fa-arrow-circle-up"
+                                                            <div className="arrow-circle-up"
                                                                 onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}
                                                                 aria-hidden="true" />
                                                         </span>
                                                         <span className="play-side">
-                                                            <i className="fa fa-play inner" style={{ color: 'white' }}
+                                                            <div className="play-inner" style={{ color: 'white' }}
                                                                 onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}
                                                                 aria-hidden="true" />
-                                                            <i className="fa fa-play outer" style={{ color: 'black' }} />
                                                         </span>
                                                     </div>
                                                     <img className="related-artist-img" src={artist.images[0].url} alt="">

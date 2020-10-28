@@ -28,8 +28,8 @@
     box-sizing: content-box;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 90px;
-    height: 75px;
-    width: 75px;
+    height: 80px;
+    width: 80px;
     z-index: 2;
     animation: artistboxentrance 1s linear forwards;
     -webkit-animation: artistboxentrance 1s linear forwards;
@@ -177,6 +177,15 @@
     opacity: 1;
 }
 
+.play-inner {
+    position: relative;
+    width: 32px;
+    top: 30%;
+    left: 8%;
+    height: 32px;
+    background-image: url('../data/icons/play.svg');
+}
+
 .play-side {
     position: absolute;
     right: 0px;
@@ -185,6 +194,25 @@
     background-color: #9B1C40;
     width: 50%;
     z-index: 3;
+}
+
+.play-side:hover .play-inner {
+    animation: .7s expand-play linear alternate infinite;
+}
+
+@keyframes expand-play {
+    0% {
+        transform: scale(.9);
+    }
+    25% {
+        transform: scale(.85);
+    }
+    50% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(.75)
+    }
 }
 
 .play-side:hover {
@@ -200,46 +228,30 @@
     bottom: -25px;
 }
 
-.fa-arrow-circle-down {
+.arrow-circle-down {
     position: absolute;
     font-size: 7.5rem;
-    opacity: 0.7;
+    height: 70px;
+    width: 70px;
+    left: 15px;
+    top: 20px;
     z-index: 3;
-    left: -1px;
-    top: -9.5px;
     color: #37393A;
+    background-image: url('../data/icons/down-arrow.svg');
 }
 
-.fa-play {
-    position: absolute;
-    font-size: 2rem;
-    opacity: 0.8;
-    border-radius: 20%;
-    color: black;
-    /* border: 3px orange solid; */
+.arrow-circle-down {
+    animation: .8s hoverdown infinite alternate linear;
 }
 
-.inner {
-    font-size: 1.8rem;
-    z-index: 3;
-    top: 10%;
-    left: 25%;
-}
-.inner:hover {
-    cursor: pointer;
-    border: 0.2px solid transparent;
-}
+@keyframes hoverdown {
+    0% {
+        transform: translateY(-20px)
+    }
 
-.fa-arrow-circle-up:hover {
-    opacity: 1;
-}
-
-.outer {
-    font-size: 2rem;
-    top: 10%;
-    left: 19%;
-    opacity: 1;
-    z-index: 2;
+    100% {
+        transform: translateY(20px)
+    }
 }
 
 .outer:hover {
@@ -262,14 +274,43 @@
     color: whitesmoke;
 }
 
-.fa-arrow-circle-up {
+.swap-side:hover .arrow-circle-up {
+    -webkit-animation: hover-arrow-up 2s ease-in infinite alternate;
+    animation: 3s hover-arrow-up linear infinite;
+}
+
+@keyframes hover-arrow-up {
+    0% {
+        bottom: 25px;
+    }
+
+    25% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 25px;
+    }
+
+    75% {
+        bottom: 50px;
+    }
+
+    100% {
+        bottom: 25px;
+    }
+}
+
+.arrow-circle-up {
     position: absolute;
-    font-size: 2rem;
     opacity: 1;
     border-radius: 50%;
-    left: 10%;
-    top: 50%;
-    color: black;
+    left: 5%;
+    bottom: 25%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-image: url('../data/icons/up-arrow.svg');
 }
 
 .fa-arrow-circle-up:hover {
@@ -283,12 +324,10 @@
 
 .artist-image-ins {
     position: relative;
-    height: 100%;
-    width: 100%;
+    height: 99%;
+    width: 99%;
     border-radius: 50%;
-    border: 2.5px white solid;
-    bottom: 2.5px;
-    right: 3px;
+    right: -.5px;
     cursor: pointer;
     z-index: 2;
     background-image: cover;
