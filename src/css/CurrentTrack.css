@@ -133,7 +133,7 @@
 .next-track {
     position: absolute;
     top: 0px;
-    left: 107px;
+    left: 108px;
     width: 60px;
     height: 60px;
     background-image: url('../data/icons/prev-track.svg');
@@ -348,9 +348,10 @@
     position: absolute;
     width: 35px;
     height: 35px;
-    bottom: 5px;
+    bottom: 5.5px;
+    left: 8px;
     background-size: contain;
-    background-image: url('../data/icons/play.svg');
+    background-image: url('../data/icons/play-empty.svg');
 }
 
 .play-icon {

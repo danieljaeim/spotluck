@@ -3,6 +3,8 @@ import axios from 'axios';
 import '../css/Success.css';
 import '../css/Thumbnail.css';
 
+const colorfilter = ['330036', '38182F', '330036', '8D0101', 'FE0B0B', 'FCA122', 'FDCC86'];
+
 export default class Thumbnail extends Component {
 
     render() {
@@ -40,7 +42,7 @@ export default class Thumbnail extends Component {
                         >
                             {/* <span className="track_number"> {i + 1}. </span> */}
                             <div className="name_artist_container">
-                                <div className="img-hover">
+                                <div className="img-hover" onClick={() => playSpecificSong(track.uri, track.name)}>
                                     <div className="play-circle" />
                                 </div>
                                 <img className='imageStyle'
@@ -57,7 +59,9 @@ export default class Thumbnail extends Component {
                                         {track.artists[0].name}
                                     </span>
                                     <span className="track-popularity">
-                                        {track.popularity}
+                                        {new Array(Math.ceil((track.popularity / 10).toFixed(2))).fill(0).map((tile, i) =>
+                                            <span className="fill-up-popularity" style={{ backgroundColor: '#' + colorfilter[i] }}/>
+                                        )}
                                     </span>
                                 </span>
                             </div>
