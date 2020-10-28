@@ -52,7 +52,7 @@ export default class App extends React.Component {
   }
 
   checkForPlayer = () => {
-    const { token } = this.state;
+    const { token, curTrack } = this.state;
 
     if (window.Spotify !== null) {
       clearInterval(this.playerCheckInterval);
@@ -72,6 +72,13 @@ export default class App extends React.Component {
 
       // Playback status updates
       this.player.on('player_state_changed', state => {
+        console.log('state changed')
+        console.log(this.state.curTrack)
+        if (this.state.curTrack) {
+          if (this.state.curTrack.duration !== state.duration) {
+            this.newSong();
+          }
+        }
         this.setState({ curTrack: state })
       });
 
@@ -117,8 +124,8 @@ export default class App extends React.Component {
     }
   }
 
-  newSong = () => {
-    clearInterval(this.state.currentTimer);
+  newSong = async () => {
+    await clearInterval(this.state.currentTimer);
     this.startTimer(0);
   }
 

@@ -339,7 +339,6 @@ export default class Success extends Component {
         let { changingPreferenceIndex, relatedArtists } = this.state;
 
         if (index === changingPreferenceIndex) {
-            // this.setState({ changingPreferenceIndex: null, currentRelatedArtists: null });
             return;
         }
 

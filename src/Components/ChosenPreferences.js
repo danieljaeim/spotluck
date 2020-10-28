@@ -28,27 +28,6 @@ export default class ChosenPreferences extends Component {
         }
     }
 
-    slide = (y) => {
-        if (!this.props.openingMenu || !this.props.currentRelatedArtists) return;
-        y > 0 ? (
-            this.slider.slickNext()
-        ) : (
-                this.slider.slickPrev()
-            )
-    }
-
-    componentWillMount() {
-        window.addEventListener('wheel', this.addWheelListener);
-    }
-
-    addWheelListener = (e) => {
-        this.slide(e.wheelDelta);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
-
     updateSearchTerm = (e) => {
         let searchTerm = e.target.value;
         this.setState({ currentSearchTerm: searchTerm });
@@ -107,17 +86,6 @@ export default class ChosenPreferences extends Component {
         let atLeastOne = preferences[0] || preferences[1] ||
             preferences[2] || preferences[3] || preferences[4];
 
-        const settings = {
-            accessibility: true,
-            centerMode: false,
-            variableWidth: true,
-            centerPadding: '64px',
-            infinite: lengthOfArtistsFound > 4 && showingData,
-            slidesToShow: 1,
-            slidesToScroll: 2,
-            initialSlide: 0,
-            speed: 700
-        };
 
         return (
             <div className="chosen-container">
@@ -170,7 +138,7 @@ export default class ChosenPreferences extends Component {
                         </span>) : null}
                 </div>
                 {currentRelatedArtists !== null ?
-                    <div className="related-artist-modal">
+                    <div className="related-search-container">
                         <div className="search-modal">
                             <div className="intro-search-modal">
                                 <div className="add-button-intro">
@@ -191,68 +159,70 @@ export default class ChosenPreferences extends Component {
                                 </div>
                             </div>
                         </div>
-                        <Slider ref={slider => this.slider = slider} className="slider-container" {...settings}>
-                            {data === null || !showingData ?
-                                currentRelatedArtists.map((artist, i) =>
-                                    <div key={artist.id}
-                                        className="related-artist">
-                                        <div
-                                            onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
-                                            onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
-                                            className="replace-div">
-                                            <span className="swap-side">
-                                                <i className="fa fa-circle" style={{ color: 'white' }} />
-                                                <i className="fa fa-arrow-circle-up"
-                                                    onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}
-                                                    aria-hidden="true" />
-                                            </span>
-                                            <span className="play-side">
-                                                <i className="fa fa-play inner" style={{ color: 'white' }}
-                                                    onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}
-                                                    aria-hidden="true" />
-                                                <i className="fa fa-play outer" style={{ color: 'black' }} />
-                                            </span>
-                                        </div>
-                                        <img className="related-artist-img" src={artist.images[2].url} alt="" />
-                                        <div className="related-artist-name">
-                                            {artist.name}
-                                        </div>
-                                    </div>
-                                ) :
-                                data.artists.items.map((artist, i) => {
-                                    if (artist.images[0]) {
-                                        return (
-                                            <div key={artist.id}
-                                                className="related-artist">
-                                                <div
-                                                    onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
-                                                    onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
-                                                    className="replace-div">
-                                                    <span className="swap-side">
-                                                        <i className="fa fa-circle" style={{ color: 'white' }} />
-                                                        <i className="fa fa-arrow-circle-up"
-                                                            onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}
-                                                            aria-hidden="true" />
-                                                    </span>
-                                                    <span className="play-side">
-                                                        <i className="fa fa-play inner" style={{ color: 'white' }}
-                                                            onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}
-                                                            aria-hidden="true" />
-                                                        <i className="fa fa-play outer" style={{ color: 'black' }} />
-                                                    </span>
-                                                </div>
-                                                <img className="related-artist-img" src={artist.images[0].url} alt="">
-                                                </img>
-                                                <div className="related-artist-name">
-                                                    {artist.name}
-                                                </div>
+                        <div className="related-artist-modal">
+                            <>
+                                {data === null || !showingData ?
+                                    currentRelatedArtists.map((artist, i) =>
+                                        <div key={artist.id}
+                                            className="related-artist">
+                                            <div
+                                                onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
+                                                onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
+                                                className="replace-div">
+                                                <span className="swap-side" onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}>
+                                                    <i className="fa fa-circle" style={{ color: 'white' }} />
+                                                    <i className="fa fa-arrow-circle-up"
+                                                        onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}
+                                                        aria-hidden="true" />
+                                                </span>
+                                                <span className="play-side" onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}>
+                                                    <i className="fa fa-play inner" style={{ color: 'white' }}
+                                                        onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}
+                                                        aria-hidden="true" />
+                                                    <i className="fa fa-play outer" style={{ color: 'black' }} />
+                                                </span>
                                             </div>
-                                        )
-                                    }
-                                    return null;
-                                })
-                            }
-                        </Slider>
+                                            <img className="related-artist-img" src={artist.images[2].url} alt="" />
+                                            <div className="related-artist-name">
+                                                {artist.name}
+                                            </div>
+                                        </div>
+                                    ) :
+                                    data.artists.items.map((artist, i) => {
+                                        if (artist.images[0]) {
+                                            return (
+                                                <div key={artist.id}
+                                                    className="related-artist">
+                                                    <div
+                                                        onMouseOver={_ => { this.setState({ swappingArtistHover: true }) }}
+                                                        onMouseLeave={_ => { this.setState({ swappingArtistHover: false }) }}
+                                                        className="replace-div">
+                                                        <span className="swap-side">
+                                                            <i className="fa fa-circle" style={{ color: 'white' }} />
+                                                            <i className="fa fa-arrow-circle-up"
+                                                                onClick={(e) => { e.preventDefault(); updatePreference(artist, 'artist') }}
+                                                                aria-hidden="true" />
+                                                        </span>
+                                                        <span className="play-side">
+                                                            <i className="fa fa-play inner" style={{ color: 'white' }}
+                                                                onClick={(e) => { e.preventDefault(); playSpecificArtist(artist.uri, artist.name) }}
+                                                                aria-hidden="true" />
+                                                            <i className="fa fa-play outer" style={{ color: 'black' }} />
+                                                        </span>
+                                                    </div>
+                                                    <img className="related-artist-img" src={artist.images[0].url} alt="">
+                                                    </img>
+                                                    <div className="related-artist-name">
+                                                        {artist.name}
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                        return null;
+                                    })
+                                }
+                            </>
+                        </div>
                     </div> : null}
             </div >
         )

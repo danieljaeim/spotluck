@@ -41,6 +41,7 @@
   width: 100vw;
   height: 100vh;
   min-height: 550px;
+  background-color: whitesmoke;
 }
 
 .root-container {

@@ -28,8 +28,8 @@
     box-sizing: content-box;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 90px;
-    height: 80px;
-    width: 80px;
+    height: 75px;
+    width: 75px;
     z-index: 2;
     animation: artistboxentrance 1s linear forwards;
     -webkit-animation: artistboxentrance 1s linear forwards;
@@ -99,15 +99,21 @@
 
 .related-artist-modal {
     position: absolute;
-    width: 100%;
-    height: 215px;
+    width: 95%;
+    left: 5%;
+    top: 0;
+    height: 300px;
+    overflow-x: scroll;
     border-radius: 10px;
-    bottom: 45px;
-    right: 10%;
 }
 
 .related-artist {
-    width: 40%;
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin: 20px;
+    top: 50px;
 }
 
 .related-artist:hover {
@@ -117,30 +123,33 @@
 .related-artist-img {
     position: absolute;
     border-radius: 8%;
-    height: 200px;
-    width: 200px;
-    object-fit: contain;
+    height: 75px;
+    width: 75px;
+    left: 0;
+    object-fit: cover;
     box-shadow: 1px 7px 15px #888888;
 }
 
 .related-artist-name {
     position: absolute;
     /* border: 1px black solid; */
-    width: 100%;
-    height: 35px;
-    font-size: 1rem;
+    width: 90px;
+    height: auto;
+    font-size: .6rem;
     text-align: center;
     white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: 700;
-    top: -15px;
-    /* border: 1px black solid; */
+    top: -20px;
+    left: -8.5px;
+    /* border: 1px white solid; */
     /* overflow: hidden; */
 }
 
 .replace-div {
     position: absolute;
     font-size: 3rem;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: #37393A;
     z-index: 2;
     opacity: 0;
@@ -150,7 +159,7 @@
 }
 
 .replace-div:hover {
-    opacity: .6;
+    opacity: .9;
 }
 
 .swap-side {
@@ -206,18 +215,16 @@
     font-size: 2rem;
     opacity: 0.8;
     border-radius: 20%;
-    top: 65px;
-    left: 38px;
     color: black;
     /* border: 3px orange solid; */
 }
 
 .inner {
-    font-size: 3.5rem;
+    font-size: 1.8rem;
     z-index: 3;
-    top: 81px;
+    top: 10%;
+    left: 25%;
 }
-
 .inner:hover {
     cursor: pointer;
     border: 0.2px solid transparent;
@@ -228,9 +235,9 @@
 }
 
 .outer {
-    font-size: 5rem;
-    top: 68px;
-    left: 28px;
+    font-size: 2rem;
+    top: 10%;
+    left: 19%;
     opacity: 1;
     z-index: 2;
 }
@@ -241,12 +248,12 @@
 
 .fa-circle {
     position: absolute;
-    font-size: 5rem;
+    font-size: 2rem;
     height: 95px;
     width: 95px;
-    opacity: 1;
+    opacity: 1.2;
     border-radius: 50%;
-    top: 66px;
+    top: 50%;
     left: 4px;
     color: whitesmoke;
 }
@@ -257,17 +264,17 @@
 
 .fa-arrow-circle-up {
     position: absolute;
-    font-size: 4.5rem;
+    font-size: 2rem;
     opacity: 1;
     border-radius: 50%;
-    top: 70px;
-    left: 20px;
+    left: 10%;
+    top: 50%;
     color: black;
 }
 
 .fa-arrow-circle-up:hover {
     cursor: pointer;
-    border: 0.2px solid transparent;
+    border: 1px solid transparent;
 }
 
 .related-artist:focus-within {
@@ -298,7 +305,6 @@
 }
 
 .slider-container {
-    height: 200px;
     animation: 1.5s slidercontainer ease-in;
     /* border: 1px black solid; */
     text-align: center;
@@ -364,23 +370,31 @@
 .search-button-modal {
     position: absolute;
     float: right;
-    top: 50px;
+    top: 0px;
     /* border: 1px black solid; */
 }
 
 .search-modal {
-    position: absolute;
+    position: relative;
     width: 40vw;
+    height: 40px;
     max-width: 500px;
-    top: -35%;
-    left: 15vw;
-    z-index: 2;
+    left: calc(50vw - 250px);
+    z-index: 3;
+    bottom: 20px;
+    /* border: 1px black solid; */
+}
+
+.related-search-container {
+    position: relative;
+    top: 25%;
 }
 
 .intro-search-modal {
     position: absolute;
     width: 65%;
-    height: 30px;
+    height: 40px;
+    top: -5px;
     border-radius: 5px;
     z-index: 1;
     opacity: 0.3;
@@ -632,8 +646,7 @@
         content: ">";
         opacity: 1;
         z-index: 3;
-        left: 40vw;
-        top: -50px;
+        left: 350px;
     }
 }
 
@@ -732,13 +745,13 @@
     content: "<";
     color: red;
     font-size: 30px;
-  }
-  
-  .slick-next:before {
+}
+
+.slick-next:before {
     content: ">";
     color: red;
     font-size: 30px;
-  }
+}
 
 .slick-next {
     position: absolute;
@@ -754,7 +767,6 @@
     border-left: 2px black solid; */
     width: 89.7vw;
     overflow: none;
-
 }
 
 .slick-track {
@@ -767,7 +779,8 @@
     padding-bottom: 40px;
     /* border: 1px black solid; */
     background-color: whitesmoke;
-    height: 200px;;
+    height: 200px;
+    ;
 }
 
 .slick-slide {
@@ -786,7 +799,6 @@
 .slick-slide:hover {
     opacity: 1;
 }
-
 
 .slick-intitialized .slick-slide {
     display: inline-block;
