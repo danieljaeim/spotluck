@@ -1,0 +1,8 @@
+.artists_list {
+    display: flex;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    overflow-y: hidden;
+    /* border: 2px black dotted; */
+}

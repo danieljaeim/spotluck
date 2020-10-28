@@ -1,0 +1,11 @@
+<svg xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+    <switch>
+        <foreignObject requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" x="0" y="0" width="1" height="1" />
+        <g i:extraneous="self">
+            <g>
+                <path d="M50.4,17.5c-1-0.5-2.2-0.5-3.1,0.2l-24,16.2H5.5c-1.6,0-3,1.3-3,3v26.3c0,1.6,1.3,3,3,3h17.9l24,16.2     c0.5,0.3,1.1,0.5,1.7,0.5c0.5,0,1-0.1,1.4-0.3c1-0.5,1.6-1.5,1.6-2.6V20.2C52,19.1,51.4,18.1,50.4,17.5z M8.5,39.8h12.9v20.3H8.5     V39.8z M46.1,74.2L27.3,61.6V38.4l18.8-12.7V74.2z" />
+                <path d="M94.5,47H82.4V34.9c0-1.6-1.3-3-3-3c-1.6,0-3,1.3-3,3V47H64.4c-1.6,0-3,1.3-3,3c0,1.6,1.3,3,3,3h12.1v12.1     c0,1.6,1.3,3,3,3c1.6,0,3-1.3,3-3V53h12.1c1.6,0,3-1.3,3-3C97.5,48.4,96.2,47,94.5,47z" />
+            </g>
+        </g>
+    </switch>
+</svg>

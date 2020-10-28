@@ -1,0 +1,9 @@
+.menu_container {
+    position: relative;
+    float: left;
+    height: 600px;
+    width: 650px;
+    top: 100px;
+    left: 50px;
+    /* border: 1px solid black; */
+}

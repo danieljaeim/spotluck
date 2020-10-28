@@ -1,0 +1,23 @@
+.cur-time-num {
+    position: relative;
+    font-size: 13px;
+    left: 7px;
+    top: 8px;
+    color: white;
+}
+
+.end-time-num {
+    position: relative;
+    font-size: 13px;
+    right: 7px;
+    top: 8px;
+    color: white;
+}
+
+.vol-down-icon {
+    position: relative;
+    left: 65px;
+    bottom: -8px;
+    height: 60px;
+    width: 60px;
+}

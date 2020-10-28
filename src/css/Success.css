@@ -1,0 +1,279 @@
+.darken {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.darken:hover {
+    opacity: 0.9;
+}
+
+.app-container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: 564px;
+    /* border: 1px black solid; */
+}
+
+.underline-area {
+    width: 105%;
+    position: absolute;
+    border-top: .5px #E36588 solid;
+    left: 92px;
+    top: 1px;
+}
+
+.bookmark-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 750px;
+    top: 23px;
+    box-sizing: content-box;
+    /* border: 1px black solid; */
+    z-index: 5;
+}
+
+.fa-lock {
+    color: #ffbf69;
+}
+
+.fa-unlock {
+    z-index: 5;
+    color: #B9B5B7;
+}
+
+.lock-button {
+    position: relative;
+    left: 0px;
+    top: 7px;
+    font-size: 28px;
+    /* border: 1px black solid; */
+}
+
+.name_artist_container {
+    position: absolute;
+    /* border: 1px black solid; */
+    width: 630px;
+    height: 80px;
+    top: 5px;
+}
+
+.header {
+    position: relative;
+    height: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+.button_success {
+    position: relative;
+    height: 20px;
+    width: 200px;
+    font-size: 15px;
+    display: block;
+    left: 43.5%; 
+    top: 50px;
+}
+
+.artist_name {
+    position: absolute; 
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+    left: 295px;
+    line-height: 25px;
+    top: 29px;
+    font-size: 16px;
+    font-weight: 425;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    color: #2E282A;
+}
+
+.track_number {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 800;
+    left: 4px;
+    top: 23px;
+}
+
+.track_name {
+    position: absolute;
+    width: 260px;
+    text-align: left;
+    font-size: 17px;
+    top: 5px;
+    left: 6px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    /* border-bottom: 1px black solid;
+    border-top: 1px black solid; */
+}
+
+.imageStyle:hover {
+    fill-opacity: black;
+    opacity: 0.2;
+}
+
+.tracklist {
+    position: absolute;
+    height: 100%;
+    background-color: white;
+    overflow-y: scroll;
+    width: 105%;
+    border-top: 5px #E36588 solid;
+    border-bottom: 5px #E36588 solid;
+    padding-bottom: 20px;
+    border-radius: 25px;
+}
+
+.border-gradient-tracklist {
+    border: 5px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+}
+
+.border-gradient-peach {
+    border-image-source: linear-gradient(to left, rgba(255,184,92,1) 0%, rgba(227,101,136,1) 75%);
+}
+
+.container {
+    position: absolute; 
+    display: inline-block;
+    height: 100%;
+    width: 820px;
+    /* border: 1px black solid; */
+    background-color: wheat;
+    bottom: 20px;
+}
+
+.success-container {
+    position: absolute;
+    top: 0px;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    border: 1px green solid;
+    /* background-color: white; */
+}
+
+.based-on {
+    position: absolute;
+    left: 0px;
+    top: -45px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #352208;
+}
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+    width: 915px;
+    height: 50px;
+    font-size: 45px;
+    color: white;
+    left: 0px;
+}
+
+.filter-by-title {
+    position: absolute;
+    height: 100%;
+    width: 170px;
+    bottom: 4px;
+    left: 140px;
+    /* border-bottom: 1px #e5e5e5 solid; */
+    /* background-color: bisque; */
+    text-align: left;
+    font-weight: 700;
+}
+
+.filter-title-text {
+    position: absolute; 
+    font-size: 18px;
+    bottom: 5px;
+    text-decoration: underline;
+}
+
+.filter-by-artist {
+    position: absolute;
+    height: 100%;
+    bottom: 4px;
+    width: 140px;
+    /* border-bottom: 1px black solid; */
+    /* background-color: beige; */
+    right: 114px;
+    text-align: left;
+    font-weight: 800;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tracklist::-webkit-scrollbar {
+    display: none;
+  }
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.tracklist {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.tracklist::-webkit-scrollbar {
+    display: none;
+}
+
+.tracklist {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.range_btn {
+    position: relative;
+    top: 20px;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+.range_btn:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.setting-btn-bar {
+    position: relative;
+    width: 50%;
+    height: 75px;
+    top: 10px;
+    /* border: 1px solid black; */
+}
+
+.artist-navigator {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    /* border: 1px black dotted; */
+    right: 0px;
+    top: 0px;
+}
+
+#audi-player {
+    position: absolute;
+}
+
+.tracklist-filter {
+    position: relative;
+    width: 95%;
+    top: -5px;
+}
+
