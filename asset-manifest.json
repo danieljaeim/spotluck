@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/spotluck/static/css/main.518fac94.chunk.css",
-    "main.js": "/spotluck/static/js/main.060d4eb7.chunk.js",
-    "main.js.map": "/spotluck/static/js/main.060d4eb7.chunk.js.map",
-    "runtime-main.js": "/spotluck/static/js/runtime-main.9c3b3283.js",
-    "runtime-main.js.map": "/spotluck/static/js/runtime-main.9c3b3283.js.map",
-    "static/css/2.362543a0.chunk.css": "/spotluck/static/css/2.362543a0.chunk.css",
-    "static/js/2.ee669797.chunk.js": "/spotluck/static/js/2.ee669797.chunk.js",
-    "static/js/2.ee669797.chunk.js.map": "/spotluck/static/js/2.ee669797.chunk.js.map",
+    "main.css": "/spotluck/static/css/main.4ab31fa6.chunk.css",
+    "main.js": "/spotluck/static/js/main.dd4e0929.chunk.js",
+    "main.js.map": "/spotluck/static/js/main.dd4e0929.chunk.js.map",
+    "runtime-main.js": "/spotluck/static/js/runtime-main.3b2cb437.js",
+    "runtime-main.js.map": "/spotluck/static/js/runtime-main.3b2cb437.js.map",
+    "static/js/2.62cbf8ab.chunk.js": "/spotluck/static/js/2.62cbf8ab.chunk.js",
+    "static/js/2.62cbf8ab.chunk.js.map": "/spotluck/static/js/2.62cbf8ab.chunk.js.map",
     "index.html": "/spotluck/index.html",
-    "precache-manifest.21bbee8b3aeab895a22b267b2e43077e.js": "/spotluck/precache-manifest.21bbee8b3aeab895a22b267b2e43077e.js",
+    "precache-manifest.5777efc6f52fd1dbb07d3197f4ea0b36.js": "/spotluck/precache-manifest.5777efc6f52fd1dbb07d3197f4ea0b36.js",
     "service-worker.js": "/spotluck/service-worker.js",
-    "static/css/2.362543a0.chunk.css.map": "/spotluck/static/css/2.362543a0.chunk.css.map",
-    "static/css/main.518fac94.chunk.css.map": "/spotluck/static/css/main.518fac94.chunk.css.map",
-    "static/js/2.ee669797.chunk.js.LICENSE.txt": "/spotluck/static/js/2.ee669797.chunk.js.LICENSE.txt",
-    "static/media/slick-theme.css": "/spotluck/static/media/slick.f97e3bbf.svg"
+    "static/css/main.4ab31fa6.chunk.css.map": "/spotluck/static/css/main.4ab31fa6.chunk.css.map",
+    "static/js/2.62cbf8ab.chunk.js.LICENSE.txt": "/spotluck/static/js/2.62cbf8ab.chunk.js.LICENSE.txt",
+    "static/media/Agreement.css": "/spotluck/static/media/preview.85f13c42.gif",
+    "static/media/Thumbnail.css": "/spotluck/static/media/return.0bc9bc84.svg",
+    "static/media/ChosenPreferences.css": "/spotluck/static/media/up-arrow.a06d8e8e.svg",
+    "static/media/CurrentTrack.css": "/spotluck/static/media/prev-track.089842f6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9c3b3283.js",
-    "static/css/2.362543a0.chunk.css",
-    "static/js/2.ee669797.chunk.js",
-    "static/css/main.518fac94.chunk.css",
-    "static/js/main.060d4eb7.chunk.js"
+    "static/js/runtime-main.3b2cb437.js",
+    "static/js/2.62cbf8ab.chunk.js",
+    "static/css/main.4ab31fa6.chunk.css",
+    "static/js/main.dd4e0929.chunk.js"
   ]
 }
