@@ -4,7 +4,7 @@ import '../css/Agreement.css';
 export default class Agreement extends Component {
     render() {
 
-        const client_id = "10bb0e9003e748e684be1160d29f3562"
+        const client_id = "85844184835545fe8096eb6a8d2934b8"
         const scopes = "streaming user-read-email user-read-private user-top-read user-modify-playback-state";
 
         return (
@@ -22,8 +22,7 @@ export default class Agreement extends Component {
                                 href={"https://accounts.spotify.com/authorize" +
                                     `?client_id=${client_id}` +
                                     "&response_type=token" +
-                                    "&redirect_uri=https://serene-hollows-75057.herokuapp.com/landing" +
-                                    // "&redirect_uri=http://localhost:3000/landing" +
+                                    "&redirect_uri=https:danieljaeim.com/spotluck/landing" +
                                     `&scope=${scopes ? encodeURIComponent(scopes) : ''}`}>
                                 Login with Spotify
                     </a>
