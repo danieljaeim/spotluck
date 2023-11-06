@@ -22,8 +22,9 @@ export default class Agreement extends Component {
                                 href={"https://accounts.spotify.com/authorize" +
                                     `?client_id=${client_id}` +
                                     `&response_type=token` +
-                                    `&redirect_uri=https://danieljaeim.com/spotluck/landing` +
-                                    `&scope=${scopes ? encodeURIComponent(scopes) : ''}`}>
+                                    `&redirect_uri=https://danieljaeim.com/spotluck/#/landing` +
+                                    `&scope=${scopes ? encodeURIComponent(scopes) : ''}`}
+                                target="_blank">
                                 Login with Spotify
                     </a>
                         </div>
