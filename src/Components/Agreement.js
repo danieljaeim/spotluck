@@ -23,7 +23,7 @@ export default class Agreement extends Component {
                                     `?client_id=${client_id}` +
                                     `&response_type=token` +
                                     `&redirect_uri=https://danieljaeim.com/spotluck/#/landing` +
-                                    `&scope=${scopes ? encodeURIComponent(scopes) : ''}`}
+                                    `&scope=${scopes ? (encodeURIComponent(scopes).split(" ").join("%20")) : ''}`}
                                 target="_blank">
                                 Login with Spotify
                     </a>
