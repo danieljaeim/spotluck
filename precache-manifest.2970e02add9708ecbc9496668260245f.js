@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "30e914f5b1a9916c7aaa5e3f96effbcf",
+    "revision": "3f607ca5a91a32049f10910f95530642",
     "url": "/spotluck/index.html"
   },
   {
-    "revision": "6c77daf79e2ae81aedce",
+    "revision": "28ba277988c5abbfcfd9",
     "url": "/spotluck/static/css/main.4ab31fa6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/spotluck/static/js/2.6be2b489.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6c77daf79e2ae81aedce",
-    "url": "/spotluck/static/js/main.fb8ae7a6.chunk.js"
+    "revision": "28ba277988c5abbfcfd9",
+    "url": "/spotluck/static/js/main.1b920dd0.chunk.js"
   },
   {
     "revision": "22197f6e9086ecc06d61",
